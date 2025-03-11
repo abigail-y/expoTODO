@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView, FlatList, Text, View, TextInput, TouchableOpacity } from 'react-native-web';
+import { StyleSheet, SafeAreaView, FlatList, Text, View, TextInput, TouchableOpacity, Platform } from 'react-native-web';
 import { CheckBox } from '@rneui/themed';
 import { FontAwesome } from '@expo/vector-icons'; // Importing FontAwesome for the trash can icon
 
@@ -103,9 +103,8 @@ export default function App() {
       </Text>
       <Text style={styles.descriptionText}>{item.description}</Text>
 
-
       <TouchableOpacity style={styles.deleteButton} onPress={() => deleteTask(item.key)}>
-        <FontAwesome name="trash" size={20} color="white" /> {/*delete button */}
+        <FontAwesome name="trash" size={20} color="white" /> {/* delete button */}
       </TouchableOpacity>
     </View>
   );
